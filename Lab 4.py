@@ -136,8 +136,56 @@ result = add_with_return(5,3) # value is saved in result
 
 print(result) #return 8
 print("using return:", add_with_return(5,3)) 
+print_separator()
 
 #part C
+#1
+
+def greet(name, greeting="hello"):
+    print (f"  {greeting}, {name}")
+
+# diffrent orders on the argument    
+greet("sven")
+greet("sven", "good night")
+greet( "good night", "sven")
+
+# using keyword so oder on the argument dont mater
+greet(name ="anna", greeting="good bye" )
+greet( greeting="good bye", name ="anna" )
+print_separator()
+
+#2
+
+def calculate_price(price, quantity =1, discount =0):
+    return price * quantity - discount
+
+print(calculate_price(100,2,50))
+
+#3
+
+def creat_profile(name, city="unknown", active=True):
+    return { 
+         "name":name,
+         "city" : city,
+         "active" : active
+    }
+print(creat_profile("anna"))
+print_separator()
+
+#4
+
+def greet(name, greeting="hello"):
+    print (f"  {greeting}, {name}")
+#key-word allows me to have greetin first in the argument
+greet( greeting="good bye", name ="anna" )
+print_separator()
+
+#5
+#def greet(greeting="hello", name):
+# This doesn't work because default parameters need to be last.
+
+#part D
+
 #1
 
 

@@ -188,6 +188,103 @@ print_separator()
 
 #1
 
+numbers =[1, 34, 78, 34, 89]
+
+def calculate_total(numbers):
+    total= 0
+    for number in numbers:
+        total += number
+    return total
+
+print(calculate_total(numbers))
+print_separator()
+
+#2
+
+def count_even(numbers):
+    count=0
+    for number in numbers:
+
+        if number %2 ==0:
+            count +=1
+    return count
+
+print(count_even(numbers))
+
+#3
+
+words = [
+    "apple", "banana", "computer", "python", "galaxy", 
+    "coffee", "guitar", "window", "shadow", "rocket", 
+    "ocean", "forest", "castle", "jacket", "blanket", "rat"
+]
+
+def get_long_words(words,minimum_length):
+    big_words = []
+    for word in words:
+        if len(word) > minimum_length:
+            big_words.append(word)
+
+    return big_words
+print (get_long_words(words, 5))
+
+#4 
+
+students = [
+    {
+        "name" :"Alice",
+        "score": 45
+    } ,
+
+    {
+        "name" :"Liam",
+        "score": 78
+    },
+
+    {
+        "name" :"Maja",
+        "score": 67
+    },
+
+    {
+        "name" : "Noah",
+        "score": 78       
+    }
+]
+
+def find_student(students, name):
+    match=None
+
+    for student in students:
+        if student["name"] == name:
+            match = student
+            break
+    
+    return match
+print(find_student(students, "Liam"))
+
+#5 
+
+def average_score(students):
+    ave_score = 0
+    amount_of_students = len(students)
+
+    for student in students:
+        ave_score +=student["score"]
+    ave_score = ave_score / amount_of_students
+    return ave_score
+
+print(average_score(students))
+
+
+    
+
+
+
+
+
+
+
 
 
 

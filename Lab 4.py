@@ -62,7 +62,7 @@ print(add(5,calculate_area(2,4)))
 #Using the retunrn from culate_area in a new calculation
 print_separator()
 
-#part B 
+#part B - Return avlues
 #1
 def is_even(number):
     return number % 2 == 0
@@ -138,7 +138,7 @@ print(result) #return 8
 print("using return:", add_with_return(5,3)) 
 print_separator()
 
-#part C
+#part C Deafults and keyword arguments
 #1
 
 def greet(name, greeting="hello"):
@@ -184,7 +184,7 @@ print_separator()
 #def greet(greeting="hello", name):
 # This doesn't work because default parameters need to be last.
 
-#part D
+#part D - Function and collections
 
 #1
 
@@ -299,25 +299,84 @@ Celsius = 30
 def celsius_to_fahrenheit(temprature):
     return temprature*9/5+32
 
-print(celsius_to_fahrenheit(Celsius))
+def classification(temprature_in_F):
+    if temprature_in_F >= 86:
+        return "hot"
+    elif temprature_in_F >= 50 and temprature_in_F < 86:
+        return "warm"
+    else:
+        return "cold"
 
 
-#F = celsius*9/5+32
-#print("temprature in fahrenheit: ", F)
+def formatting(celsius, farenheit, classification):
+   print("temprature is: ", celsius, "celsius,", farenheit, "farenheit,", "it is", classification ) 
+
+formatting(Celsius,celsius_to_fahrenheit(Celsius), classification(celsius_to_fahrenheit(Celsius)))
+
+print_separator()
 
 
+# 2
+
+item1 =50
+item2 = 150
+discount_procent = 10 
+
+def subtotal(item1, item2):
+    return item1+item2
+
+def discount(subtotal, discount_procent):
+    return subtotal * (discount_procent/100)
 
 
-
-    
-
-
+def final_total(subtotal, discount):   
+    return subtotal - discount
 
 
+print(f"""subtotal: {subtotal(item1, item2)},
+discount: {discount(subtotal(item1, item2), discount_procent)},
+final price: {final_total(subtotal(item1, item2), discount(subtotal(item1, item2), discount_procent))}""")
+
+print_separator()
+
+a = 5
+b = 3
+
+def add(a,b):
+    return a+b
+def subtract(a,b):
+    return a-b
+def multiply(a,b):
+    return a*b
+def divide(a,b):
+    return a/b
+
+# print(add(5,3))
+# print(subtract(5,3))
+# print(multiply(5,3))
+# print(divide(5,3))
+# print_separator()
+
+#3 instead of using repeated print, 
+#(calculate asks for functions)
+def calculate(res_add, res_sub, res_mult, res_div):
+        print(f""" Result
+        {a} + {b} = {res_add}
+        {a} - {b} = {res_sub}
+        {a} x {b} = {res_mult}
+        {a} / {b} = {res_div}""")   
+
+calculate(add(a,b),subtract(a,b),multiply(a,b),divide(a,b))
+print_separator()
+
+#4 
+if __name__ == "__main__":
+    fahrenheit = celsius_to_fahrenheit(Celsius)
+    status = classification(fahrenheit)
+    formatting(Celsius, fahrenheit, status)
 
 
-
-
+# partg G - strech challenges
 
 
 

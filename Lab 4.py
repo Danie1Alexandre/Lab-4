@@ -210,6 +210,7 @@ def count_even(numbers):
     return count
 
 print(count_even(numbers))
+print_separator()
 
 #3
 
@@ -227,28 +228,33 @@ def get_long_words(words,minimum_length):
 
     return big_words
 print (get_long_words(words, 5))
+print_separator()
 
 #4 
 
 students = [
     {
         "name" :"Alice",
-        "score": 45
+        "score": 45,
+        "active": True
     } ,
 
     {
         "name" :"Liam",
-        "score": 78
+        "score": 78,
+        "active": False
     },
 
     {
         "name" :"Maja",
-        "score": 67
+        "score": 67,
+        "active": True        
     },
 
     {
         "name" : "Noah",
-        "score": 78       
+        "score": 78 ,
+        "active": True      
     }
 ]
 
@@ -262,6 +268,7 @@ def find_student(students, name):
     
     return match
 print(find_student(students, "Liam"))
+print_separator()
 
 #5 
 
@@ -275,6 +282,31 @@ def average_score(students):
     return ave_score
 
 print(average_score(students))
+print_separator()
+
+# 6
+
+def get_active_users(users):
+    return [user for user in users if user.get("active") is True]
+
+print(get_active_users(students))
+print_separator()
+
+# Part E Decomposition
+#1
+Celsius = 30
+
+def celsius_to_fahrenheit(temprature):
+    return temprature*9/5+32
+
+print(celsius_to_fahrenheit(Celsius))
+
+
+#F = celsius*9/5+32
+#print("temprature in fahrenheit: ", F)
+
+
+
 
 
     
